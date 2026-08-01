@@ -1,0 +1,37 @@
+<section class="section education" id="education">
+  <div class="container education__layout">
+    <div class="education__col">
+      <p class="eyebrow">Formation</p>
+      <h2 class="section-title">Les fondations</h2>
+
+      <div class="education__list">
+        @for (item of education; track item.school; let i = $index) {
+          <div class="edu-card" [appRevealOnScroll]="delayFor(i)">
+            <h3 class="edu-card__school">{{ item.school }}</h3>
+            <p class="edu-card__degree">{{ item.degree }}</p>
+            <p class="edu-card__period">{{ item.period }}</p>
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="education__col">
+      <p class="eyebrow">Langues</p>
+      <h2 class="section-title">Communication</h2>
+
+      <div class="education__list">
+        @for (lang of languages; track lang.name; let i = $index) {
+          <div class="lang-card" [appRevealOnScroll]="delayFor(i)">
+            <div class="lang-card__head">
+              <span class="lang-card__name">{{ lang.name }}</span>
+              <span class="lang-card__level">{{ lang.level }}</span>
+            </div>
+            <div class="lang-card__bar">
+              <div class="lang-card__fill" [style.width.%]="lang.proficiency"></div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

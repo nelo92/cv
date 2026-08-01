@@ -1,0 +1,52 @@
+<header class="hero">
+  <div class="hero__blob hero__blob--1"></div>
+  <div class="hero__blob hero__blob--2"></div>
+  <div class="hero__blob hero__blob--3"></div>
+  <div class="hero__grid"></div>
+
+  <div class="container hero__inner">
+    <p class="eyebrow hero__eyebrow">{{ profile.location }}</p>
+
+    <h1 class="hero__name">
+      <span class="hero__hi">Bonjour, je suis</span>
+      {{ profile.name }}
+    </h1>
+
+    <p class="hero__title gradient-text">{{ profile.title }}</p>
+
+    <div class="hero__pitch">
+      @for (paragraph of profile.pitch; track paragraph) {
+        <p>{{ paragraph }}</p>
+      }
+    </div>
+
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="#experience">Voir mon parcours</a>
+      <a class="btn btn--ghost" [href]="profile.cvFile" [download]="profile.cvFile">
+        Télécharger le CV ↓
+      </a>
+      <a class="btn btn--ghost" [href]="profile.linkedin" target="_blank" rel="noopener">
+        LinkedIn ↗
+      </a>
+    </div>
+
+    <div class="hero__stats">
+      <div class="hero__stat">
+        <span class="hero__stat-value gradient-text">{{ years }}</span>
+        <span class="hero__stat-label">ans d'expérience</span>
+      </div>
+      <div class="hero__stat">
+        <span class="hero__stat-value gradient-text">16</span>
+        <span class="hero__stat-label">missions menées</span>
+      </div>
+      <div class="hero__stat">
+        <span class="hero__stat-value gradient-text">6</span>
+        <span class="hero__stat-label">secteurs d'activité</span>
+      </div>
+    </div>
+  </div>
+
+  <a class="hero__scroll" href="#experience" aria-label="Défiler vers le parcours">
+    <span></span>
+  </a>
+</header>

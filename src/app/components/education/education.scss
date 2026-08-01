@@ -1,0 +1,90 @@
+.education__layout {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 64px;
+}
+
+.education__list {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.edu-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent-1);
+  border-radius: var(--radius-s);
+  padding: 18px 22px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.edu-card:hover {
+  transform: translateX(4px);
+  background: var(--surface-hover);
+}
+
+.edu-card__school {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.edu-card__degree {
+  margin-top: 6px;
+  color: var(--text-1);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.edu-card__period {
+  margin-top: 8px;
+  color: var(--text-2);
+  font-size: 0.82rem;
+}
+
+.lang-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-s);
+  padding: 18px 22px;
+}
+
+.lang-card__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.lang-card__name {
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+.lang-card__level {
+  color: var(--text-2);
+  font-size: 0.85rem;
+}
+
+.lang-card__bar {
+  margin-top: 12px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+}
+
+.lang-card__fill {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--gradient-brand);
+  transition: width 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (max-width: 800px) {
+  .education__layout {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}

@@ -1,0 +1,23 @@
+<footer class="footer" id="contact">
+  <div class="footer__glow"></div>
+  <div class="container footer__inner">
+    <h2 class="footer__title">
+      Discutons de votre <span class="gradient-text">prochaine architecture</span>
+    </h2>
+    <p class="footer__subtitle">Disponible pour échanger sur vos projets techniques.</p>
+
+    <div class="footer__actions">
+      <a class="btn btn--primary" [href]="profile.linkedin" target="_blank" rel="noopener">
+        Me contacter sur LinkedIn ↗
+      </a>
+      <a class="btn btn--ghost" [href]="profile.cvFile" [download]="profile.cvFile">
+        Télécharger le CV ↓
+      </a>
+    </div>
+
+    <div class="footer__bottom">
+      <span>{{ profile.name }} — {{ profile.title }}</span>
+      <span>© {{ year }}</span>
+    </div>
+  </div>
+</footer>

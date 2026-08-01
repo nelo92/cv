@@ -1,0 +1,35 @@
+<section class="section experience" id="experience">
+  <div class="container">
+    <p class="eyebrow">Parcours</p>
+    <h2 class="section-title">
+      25 ans à construire des <span class="gradient-text">systèmes qui durent</span>
+    </h2>
+
+    <ol class="timeline">
+      @for (exp of experiences; track exp.company + exp.period; let i = $index) {
+        <li class="timeline__item" [appRevealOnScroll]="delayFor(i)">
+          <div class="timeline__marker" [class.timeline__marker--current]="exp.current"></div>
+
+          <div class="timeline__card">
+            <div class="timeline__head">
+              <h3 class="timeline__role">{{ exp.role }}</h3>
+              @if (exp.current) {
+                <span class="timeline__badge">Poste actuel</span>
+              }
+            </div>
+            <p class="timeline__company">{{ exp.company }}</p>
+            <div class="timeline__meta">
+              <span>{{ exp.period }}</span>
+              <span class="timeline__dot">•</span>
+              <span>{{ exp.duration }}</span>
+              @if (exp.location) {
+                <span class="timeline__dot">•</span>
+                <span>{{ exp.location }}</span>
+              }
+            </div>
+          </div>
+        </li>
+      }
+    </ol>
+  </div>
+</section>
