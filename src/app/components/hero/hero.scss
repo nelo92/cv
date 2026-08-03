@@ -7,17 +7,6 @@
   padding: 140px 0 100px;
 }
 
-.hero__grid {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
-  background-size: 56px 56px;
-  mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, #000 40%, transparent 100%);
-  pointer-events: none;
-}
-
 .hero__blob {
   position: absolute;
   border-radius: 50%;
@@ -64,6 +53,7 @@
 .hero__inner {
   position: relative;
   z-index: 1;
+  width: 100%;
 }
 
 .hero__eyebrow {
